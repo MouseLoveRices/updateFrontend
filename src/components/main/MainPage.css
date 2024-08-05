@@ -1,0 +1,19 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    width: 100vw;
+}
+.sectionBanner{
+    display: flex;
+    align-items: center;
+}
+.container .row h1{
+    font-size: 70px;
+}
+.container .row button{
+    background: aqua;
+    color: #fff;
+}
