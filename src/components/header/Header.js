@@ -1,5 +1,18 @@
-import * as React from 'react';
-import {AppBar,Box,CssBaseline,Divider,Drawer,ListItem,List,ListItemButton,ListItemText,Button,Toolbar,IconButton} from '@mui/material';
+import React, { useEffect } from 'react';
+import {
+  AppBar,
+  Box,
+  CssBaseline,
+  Divider,
+  Drawer,
+  ListItem,
+  List,
+  ListItemButton,
+  ListItemText,
+  Button,
+  Toolbar,
+  IconButton,
+} from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import logo from '../../img/logo.png';
 import './header.css';
@@ -33,9 +46,42 @@ export default function Header({ children }, props) {
     }
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      let currentSection = navItems[0].name;
+
+      navItems.forEach((item) => {
+        const section = document.getElementById(item.id);
+        if (section) {
+          const { top } = section.getBoundingClientRect();
+          // Check if the top of the section is within the top half of the viewport
+          if (top <= window.innerHeight / 2 && top >= -section.clientHeight / 2) {
+            currentSection = item.name;
+          }
+        }
+      });
+
+      if (currentSection !== activeItem) {
+        setActiveItem(currentSection);
+      }
+    };
+
+    const isBrowser = typeof window !== 'undefined';
+
+    if (isBrowser) {
+      window.addEventListener('scroll', handleScroll);
+    }
+
+    return () => {
+      if (isBrowser) {
+        window.removeEventListener('scroll', handleScroll);
+      }
+    };
+  }, [window,activeItem]);
+
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
-      <img src={logo} style={{ height: 'auto' }} alt='logo' />
+      <img src={logo} style={{ height: '50px', marginTop: '5px' }} alt='logo' />
       <Divider />
       <List>
         {navItems.map((item) => (
@@ -61,11 +107,10 @@ export default function Header({ children }, props) {
       <AppBar component="nav">
         <Toolbar>
           <IconButton
-            color="inherit"
             aria-label="open drawer"
             edge="start"
             onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { sm: 'none' } }}
+            sx={{ mr: 2, display: { sm: 'none' }, color: 'aqua' }}
           >
             <MenuIcon />
           </IconButton>

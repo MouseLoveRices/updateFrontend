@@ -16,11 +16,16 @@ export default function Section2() {
   return (
     <section id='category'>
                 <div className='tittle'>
-                    <h1>Our target</h1>    
+                    <h1>Our target</h1>  
+                    <p>
+                        <i class="fa-solid fa-code-commit"></i>
+                        <i class="fa-solid fa-code-commit"></i>
+                        <i class="fa-solid fa-code-commit"></i>
+                    </p>  
                 </div>
                 <Container>
-                    <Row>
-                        <Col lg="3" md="4" xs="6" sm="6">
+                    <Row uk-grid uk-scrollspy="cls: uk-animation-fade; target: .col-6; delay: 200; repeat: true">
+                        <Col lg="3" md="4" xs="6" sm="6" >
                             <Card variant="plain">
                                 <CardContent>
                                     <SportsBasketballIcon></SportsBasketballIcon>

@@ -16,7 +16,7 @@ export default function Test() {
     }, [dispatch]);
 
     const handleCardClick = (id) => {
-        navigate(`/video/${id}`); // Use navigate instead of history.push
+        navigate(`/video/${id.toString()}`); // Use navigate instead of history.push
     };
     
 
@@ -27,8 +27,8 @@ export default function Test() {
                     {list.map((item, index) => (
                         <Col key={index} md="4" xs="6">
                             <Card onClick={() => handleCardClick(item.id)} style={{ cursor: 'pointer', marginBottom:"10px"}}>
-                                <video width="100%" height="200px" controls poster={item.url}>
-                                    <source src={item.video} type="video/mp4" />
+                                <video width="100%" height="200px" controls poster={item.img}>
+                                    <source src={item.url} type="video/mp4" />
                                 </video>
                                 <CardBody>
                                     <CardTitle tag="h5">{item.video}</CardTitle>

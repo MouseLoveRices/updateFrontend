@@ -15,5 +15,6 @@
     text-shadow: 1px 1px 2px rgb(4, 0, 231);
 }
 .active{
-    background: rgb(61, 241, 166) !important;
+    text-decoration: underline !important;
+    color: yellow !important;
 }

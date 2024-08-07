@@ -11,10 +11,15 @@ export default function Section4() {
     <section id='style'>
             <div className='tittle'>
                 <h1>Be the way you are</h1>
+                <p>
+                    <i class="fa-solid fa-code-commit"></i>
+                    <i class="fa-solid fa-code-commit"></i>
+                    <i class="fa-solid fa-code-commit"></i>
+                </p> 
             </div>
                 <Container>
                     <Row>
-                        <Col lg="3" sm="6" xs="6">
+                        <Col lg="3" sm="6" xs="6" uk-scrollspy="cls: uk-animation-slide-left; repeat: true">
                         <Card
                             variant="plain"
                             sx={{
@@ -138,7 +143,7 @@ export default function Section4() {
                             </Box>
                             </Card>
                         </Col>
-                        <Col lg="3" sm="6" xs="6">
+                        <Col lg="3" sm="6" xs="6" uk-scrollspy="cls: uk-animation-slide-top; repeat: true">
                         <Card
                             variant="plain"
                             sx={{
@@ -262,7 +267,7 @@ export default function Section4() {
                             </Box>
                             </Card>
                         </Col>
-                        <Col lg="3" sm="6" xs="6">
+                        <Col lg="3" sm="6" xs="6" uk-scrollspy="cls: uk-animation-slide-bottom; repeat: true">
                         <Card
                             variant="plain"
                             sx={{
@@ -386,7 +391,7 @@ export default function Section4() {
                             </Box>
                             </Card>
                         </Col>
-                        <Col lg="3" sm="6" xs="6">
+                        <Col lg="3" sm="6" xs="6" uk-scrollspy="cls: uk-animation-slide-right; repeat: true">
                         <Card
                             variant="plain"
                             sx={{

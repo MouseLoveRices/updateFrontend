@@ -1,10 +1,12 @@
 import * as React from 'react';
 import {AppBar, Box, CssBaseline, Divider, Drawer, IconButton, ListItemIcon, Toolbar} from '@mui/material';
-import {List, ListItemButton, ListItemText, Avatar, Input, Typography, Modal} from '@mui/material';
+import {List, ListItemButton, ListItemText, Avatar, Typography, Modal} from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import NotificationsNoneIcon from '@mui/icons-material/NotificationsNone';
 import { Send } from '@mui/icons-material';
 import { Button} from 'reactstrap';
+import WebIcon from '@mui/icons-material/Web';
+import ConnectWithoutContactIcon from '@mui/icons-material/ConnectWithoutContact';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchUser } from '../../redux/userSlices';
 import logo from '../../img/logo.png';
@@ -47,6 +49,9 @@ export default function Header({ children, window }) {
   const handleUserClick = (id) => {
     navigate(`/user/${id.toString()}`);  // Ensure this is a string
   };
+  const hanldleListClick = ()=>{
+    navigate('/home')
+  }
 
   const style = {
     position: 'absolute',
@@ -65,11 +70,15 @@ export default function Header({ children, window }) {
       <Toolbar />
       <Divider />
       <List>
-        <ListItemButton>
-          <ListItemIcon>
-            <Send />
-          </ListItemIcon>
-          <ListItemText primary="Send Mail" />
+        <ListItemButton onClick={hanldleListClick}>          
+          <WebIcon></WebIcon>
+          <ListItemText primary="About us" />
+        </ListItemButton>
+      </List>
+      <List>
+        <ListItemButton>          
+          <ConnectWithoutContactIcon></ConnectWithoutContactIcon>
+          <ListItemText primary="Contact Us" />
         </ListItemButton>
       </List>
       <hr />
@@ -119,12 +128,15 @@ export default function Header({ children, window }) {
             <MenuIcon />
           </IconButton>
           <img src={logo} alt="logo" style={{ height: '40px', marginBottom: '5px' }} onClick={handleLogoClick}/>
-          <Input type='text' placeholder='Search'/>
+          <div className='searchVideo'>     
+          <form className="uk-search uk-search-default">                      
+            <input className="uk-search-input" type="search" placeholder="Search" aria-label=""/>
+          </form>
+          </div>
           <div style={{display:"inline-flex", alignItems:"center"}}>
             <Button onClick={handleOpen} style={{background:"none",border:"none"}}>
-              <NotificationsNoneIcon style={{fontSize:"30px", marginRight:"10px",color:"black"}}/>
-            </Button>
-            
+              <NotificationsNoneIcon style={{fontSize:"200%", marginRight:"10px",color:"black"}}/>
+            </Button>           
             <Avatar src={userAvatar} alt='user Signed'/>
             <Modal
               open={open}

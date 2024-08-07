@@ -9,10 +9,17 @@ import { Box, CardContent, CardMedia, Typography } from '@mui/material';
 const Video = () => {
     const dispatch = useDispatch()
     const list = useSelector(state=>state.list.list)
+    const video = list.find((video)=>video.id === id)
     const {id} = useParams()
     useEffect(()=>{
-        dispatch(fetchData())
-    },[dispatch])
+        if(!video){
+            dispatch(fetchData())
+        }
+        },[dispatch,video])
+        
+        if (!video) {
+            return <div>Loading....</div>; // Handle case where user is not found
+          }
     return (
         <Header>
             <Container>
@@ -20,7 +27,7 @@ const Video = () => {
                     <Col lg="8" xs="12">
                     <h4>Video Page</h4>
                     <video controls width="100%">
-                        <source src={id} type="video/mp4" />
+                        <source src={video.url} type="video/mp4" />
                         Trình duyệt của bạn không hỗ trợ thẻ video.
                     </video>
                     </Col>

@@ -12,9 +12,14 @@ export default function Section8() {
     <section id='co-founder'>
         <div className='tittle'>
             <h1>Co-Founder</h1>
+            <p>
+                <i class="fa-solid fa-code-commit"></i>
+                <i class="fa-solid fa-code-commit"></i>
+                <i class="fa-solid fa-code-commit"></i>
+            </p> 
         </div>
-        <Container>
-            <Row>
+        <Container >
+            <Row uk-scrollspy="target: > div; cls: uk-animation-fade; delay: 500; repeat: true">
                 <Col lg="2" md="4" xs="6" sm="6">
                     <img src={youtube} alt="youtube" />
                 </Col>

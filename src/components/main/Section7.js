@@ -9,10 +9,15 @@ export default function Section7() {
     <section id='aboutUs'>
         <div className='tittle'>
             <h1>About us</h1>
+            <p>
+                <i class="fa-solid fa-code-commit"></i>
+                <i class="fa-solid fa-code-commit"></i>
+                <i class="fa-solid fa-code-commit"></i>
+            </p> 
         </div>
         <Container >
-            <Row>
-                <Col lg="5" sm="12" xs="12">
+            <Row uk-scrollspy="cls:uk-animation-fade">
+                <Col lg="5" sm="12" xs="12" class="uk-card uk-card-default uk-card-body" uk-scrollspy="cls: uk-animation-slide-top; repeat: true; delay: 700">
                     <Accordion defaultExpanded>
                         <AccordionSummary
                         expandIcon={<ExpandMoreIcon />}

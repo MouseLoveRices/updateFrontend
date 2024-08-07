@@ -3,7 +3,7 @@ import Test from "../src/components/videos/ListVideo";
 import Video from "../src/components/video/Video";
 import MainPage from "./components/main/MainPage";
 import User from "./components/user/User";
-import Header from "./components/header/Header";
+import Contact from "./components/contact/Contact";
 
 
 function App() {
@@ -16,6 +16,7 @@ function App() {
         <Route path="/video/:id" element={<Video/>} />
         <Route path="/home" element={<MainPage/>}></Route>
         <Route path="/user/:id" element={<User/>}></Route>
+        <Route path="/contact" element={<Contact/>}></Route>
       </Routes>   
     </Router>
 

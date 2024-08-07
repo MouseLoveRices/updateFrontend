@@ -14,13 +14,18 @@ export default function Section6() {
     <section id='policy'>
         <div className='tittle'>
             <h1>Policies and benefits</h1>
+            <p>
+                <i class="fa-solid fa-code-commit"></i>
+                <i class="fa-solid fa-code-commit"></i>
+                <i class="fa-solid fa-code-commit"></i>
+            </p> 
         </div> 
-        <Container>
-            <Row>
-                <Col lg="6" xs="12" sm="12">
+        <Container >
+            <Row uk-scrollspy="cls:uk-animation-fade">
+                <Col lg="6" xs="12" sm="12" class="uk-card uk-card-default uk-card-body" uk-scrollspy="cls: uk-animation-slide-bottom; repeat: true; delay: 700">
                     <img src={policy} alt='policy'/>
                 </Col>
-                <Col lg="6" xs="12" sm="12">
+                <Col lg="6" xs="12" sm="12" class="uk-card uk-card-default uk-card-body" uk-scrollspy="cls: uk-animation-slide-right; repeat: true; delay: 700">
                     <Box sx={{ width: '100%' }}>
                         <Tabs
                         value={value}

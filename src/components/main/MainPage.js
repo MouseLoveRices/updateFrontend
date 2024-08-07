@@ -64,7 +64,7 @@ export default function MainPage() {
                                     <Col lg="8" xs="12">
                                         <h1 className='slogan'>To seek one's aspirations</h1>
                                         <h1 className='name'>Social media</h1>
-                                        <h2>Mice-Videos</h2>
+                                        <h2>-MiceVideos-</h2>
                                     </Col>
                                     <Col lg="4" xs="12">
                                         <Button onClick={handleLaunchCLick} >Launch</Button>
