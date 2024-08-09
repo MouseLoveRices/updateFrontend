@@ -1,0 +1,53 @@
+.head .contain{  
+    position: fixed;
+    padding: 10px 20px;
+    display: flex;
+    width: 100%;
+    height: 60px ;
+    background-color: #fff;
+    justify-content: space-between;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+.head .contain .action{  
+    display: flex;
+    align-items: center;
+}
+.head .contain .action button{
+    font-size: 26px;
+    padding: 5px;
+    background: none;
+    border: none;
+    margin-right: 10px;
+}
+.head .contain .search{
+    width: 25%;
+    padding-left: 5px;
+    display: flex;
+}
+.head .contain .search input{
+    padding: 10px 10px 10px 25px;
+    border: 1px solid;
+    outline: none;
+    width: 87%;
+    border-radius: 50px 0 0 50px;
+}
+.head .contain .search button{
+    background: gray;
+    border: none;
+    font-size: 25px;
+    color: #fff;
+    padding: 0px 10px 8px 10px;
+    border-radius: 0 50px 50px 0;
+}
+.head .contain .userLocal{
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+}
+.head .contain .userLocal button{
+    font-size: 35px;
+    margin-right: 15px;
+    border: none;
+    background: none;
+}
+

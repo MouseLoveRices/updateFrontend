@@ -1,0 +1,43 @@
+import React, { useEffect } from 'react'
+import { useDispatch, useSelector } from 'react-redux';
+import { useParams } from 'react-router-dom'
+import { fetchUser } from '../../redux/userSlices';
+import { Avatar, Typography } from '@mui/material';
+import './User.css'
+import { Container } from 'react-bootstrap';
+import Body from '../body/Body';
+
+export default function User() {
+  const { id } = useParams();
+  const dispatch = useDispatch();
+  const { listUser } = useSelector((state) => state.listUser); // Get loading state
+  const user = listUser.find((user) => user.id === id);
+
+  useEffect(() => {
+    if (!user) {
+      dispatch(fetchUser());
+    }
+  }, [dispatch, user]);
+
+  if (!user) {
+    return <div>Loading....</div>; // Handle case where user is not found
+  }
+
+  return (
+    <>
+      <Body>
+      <div className='userPage'>
+        <div className='userInfor'>
+            <Avatar src={user.avatar} alt={user.user} style={{ width: '10%', height: '20%' }}/>       
+            <Typography variant="h2">{user.user}</Typography>
+        </div>     
+        <hr/>
+        <h2>Video</h2>
+        <Container>
+
+        </Container>
+      </div>
+      </Body>
+    </>
+  );
+}

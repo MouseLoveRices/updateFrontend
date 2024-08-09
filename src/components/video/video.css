@@ -1,0 +1,23 @@
+.videoOfUser .container{
+    margin-top: 10px;
+}
+.videoOfUser .nameAndView{
+    display: flex;
+    justify-content: space-between;
+}
+.videoOfUser .container .you{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+}
+.videoOfUser .row .card{
+    margin-bottom: 10px;
+}
+.videoOfUser .row .card img{
+    border-radius: 10px;
+}
+.container .MuiChip-root{
+    background: rgb(196, 194, 194);
+    margin-right: 5px;
+    margin-bottom: 10px;
+}
