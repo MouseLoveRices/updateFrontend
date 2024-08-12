@@ -1,0 +1,33 @@
+:root {
+    --transition-duration: 0.3s;
+    --transition-ease: ease;
+    --border-radius: 10px;
+    --border-color: #ccc9c9;
+    --button-bg-color: none;
+    --button-hover-bg-color: rgb(189, 188, 188);
+    --footer-bg-color: black;
+    --footer-text-color: #ccc9c9;
+    --footer-header-color: rgb(28, 218, 218);
+    --footer-text-shadow: #FC0 1px 0 10px;
+    --avatar-size: 40px;
+    --input-width: 90%;
+    --default-margin-bottom: 10px;
+    --default-margin-right:10px;
+    --default-padding: 10px;
+    --default-width: 100%;
+    --default-color: #ccc9c9;
+    --primary-text-color: #ccc9c9;
+    --highlight-color: rgb(28, 218, 218);
+  }
+  
+  /* Common styles across multiple files can be defined here */
+  button {
+    border-radius: var(--border-radius);
+    background: var(--button-bg-color);
+    transition: background var(--transition-duration) var(--transition-ease);
+  }
+  
+  button:hover {
+    background: var(--button-hover-bg-color);
+  }
+  

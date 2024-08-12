@@ -1,0 +1,35 @@
+.videoOfUser .container {
+    margin-top: var(--default-margin-bottom);
+  }
+  
+  .videoOfUser .nameAndView {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .videoOfUser .container .you {
+    display: flex;
+    flex-direction: row;
+    
+    margin-bottom: var(--default-margin-bottom);
+  }
+
+  .videoOfUser .container .you input {
+    width: 80%;
+    margin-left: 10px;
+  }
+  
+  .videoOfUser .row .card {
+    margin-bottom: var(--default-margin-bottom);
+  }
+  
+  .videoOfUser .row .card img {
+    border-radius: var(--border-radius);
+  }
+  
+  .container .MuiChip-root {
+    background: rgb(196, 194, 194);
+    margin-right: 5px;
+    margin-bottom: var(--default-margin-bottom);
+  }
+  

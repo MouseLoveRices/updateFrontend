@@ -1,0 +1,105 @@
+/* body.css */
+
+.bodyOfPage {
+    display: flex;
+    transition: all 0.3s ease;
+  }
+.bodyOfPage h4{
+  text-align: center;
+}
+
+  .sideBar {
+    transition: width 0.3s ease;
+    padding: 80px 5px 10px 20px;
+    width: 15%;
+    border: 1px outset;
+  }
+  
+  .sideBar.closed {
+    width: 5%;
+    padding-left: 5px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 38px, rgba(0, 0, 0, 0.22) 0px 0px 12px;
+  }
+  .sideBar.closed button{
+    display: flex;
+    justify-content: center;
+  }
+  .infor, .you, .userSubscribed{
+    text-align: center;
+  }
+  .childrenItem {
+    padding: 90px 5px 10px 30px;
+    transition: width 0.3s ease;
+  }
+  
+  .userSubscribed {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .userSubscribed button {
+    background: none;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    border: none;
+  }
+  .userSubscribed button p{
+    margin-left: 10px;
+  }
+  
+  .sideBar .infor {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .sideBar .infor button {
+    margin-top: 10px;
+    display: flex;
+    border-radius: 5px;
+    width: 100%;
+    background: none;
+    border: none;
+  }
+  .sideBar .infor button p{
+    margin-left: 10px;
+  }
+  
+  
+  .you {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .you button {
+    padding-top: 10px;
+    width: 100%;
+    display: flex;
+    border: none;
+    border-radius: 5px;
+    background: none;
+  }
+  .you button p{
+    margin-left: 10px;
+  }
+  
+  .you button i {
+    font-size: 25px;
+  }
+  
+  button:hover {
+    background: rgb(189, 188, 188);
+  }
+  
+  /* Hide sidebar completely on smaller screens */
+  @media (max-width: 1000px) {
+    .sideBar {
+      display: none;
+    }
+  
+    .childrenItem {
+      width: 100% !important;
+    }
+  }
+  

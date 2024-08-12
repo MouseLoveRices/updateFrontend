@@ -1,0 +1,20 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.css-19kzrtu{
+    padding: 0 !important;
+}
+.MuiAppBar-colorPrimary{
+    background: #fff !important;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+.MuiButton-textPrimary{
+    color: #001C44 !important;
+    text-shadow: 1px 1px 2px rgb(3, 251, 52);
+}
+.active{
+    font-weight: bold !important;
+    color: rgb(0, 8, 255) !important;
+}

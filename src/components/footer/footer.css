@@ -1,0 +1,44 @@
+.footer{
+    margin-top: 20px;
+    padding: 10px;
+    height: auto;
+    background: black;
+}
+.footer .container .row img{
+    width: 40%;
+}
+.footer .container .row h3{
+    color: #fff;
+    text-shadow: #FC0 1px 0 10px;
+}
+.footer .container .row p{
+    color: #ccc9c9;
+}
+.footer .copyright{
+    text-align: center;
+    color: grey;
+}
+.footer .container .row input{
+    width: 70%;
+    margin-bottom: 7px;
+    display: inline;
+    margin-right: 15px;
+}
+.footer hr{
+    color: #fff;
+}
+.footer .container .row span{
+    font-size: 25px;
+    color: #ccc9c9;
+}
+.footer .container .row .col-12{
+    margin-top: 10px;
+}
+.footer .container .row .linkReport{
+    text-decoration: none;
+    color: #ccc9c9;
+}
+.footer .container .row .linkReport:hover{
+    text-decoration: underline;
+    color: rgb(28, 218, 218);
+}
